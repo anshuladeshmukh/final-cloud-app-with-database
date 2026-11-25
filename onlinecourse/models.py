@@ -127,7 +127,7 @@ class Enrollment(models.Model):
 # <HINT> The submission model
 # One enrollment could have multiple submission
 # One submission could have multiple choices
-    class Question(models.Model):
+class Question(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     question_text = models.CharField(max_length=500)
     grade = models.IntegerField(default=50)
